@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+      <h1>JS practice</h1>
+      <h2>Javascript Inheritance practice</h2>
+
+
+    <script type="text/javascript">
+    // ====================== Find the least value of the array ===================//
+  // var x = [100,50,60,1000,500,9,34,25,200,40,23,11,45,2,65,44,34,22,100]
+  //
+  //
+  //
+  //         function findLeast(arr){
+  //             var least = arr[0];
+  //           for( var i=1; i< arr.length; i++){
+  //               if(arr[i] < least){
+  //                 least = arr[i];
+  //
+  //               }
+  //               else {
+  //                 least = least;
+  //
+  //               }
+  //           }
+  //
+  //           return least;
+  //         }
+  //
+  //
+  //         console.log(findLeast(x));
+
+// ====================== Find the least value of the array ===================//
+
+//============================== Ipv4 validation ==============================//
+          var myipv4 = prompt("Try inputting Ipv4 and will check if it's valid");
+
+          var dotctr = 0;
+
+function testIpv4(ipv4){
+  for(var i =0; i< ipv4.length; i++){
+      if(ipv4[i] === "."){
+        dotctr++;
+      }
+  }
+  if(dotctr === 3){
+    var octa ="";
+    var ipv4 = ipv4 + ".";
+    console.log(ipv4);
+    var invalid = "";
+      for(var x =0; x < ipv4.length; x ++)
+      {
+          if(ipv4[x] === ".")
+          {
+            var newOcta = parseInt(octa);
+            if(newOcta < 0 || newOcta > 255)
+            {
+            invalid = "Invalid Ipv4";
+            break;
+              }
+              else
+              {
+                octa = "";
+              }
+          }
+          else
+          {
+            octa += ipv4[x];
+
+          }
+      }
+      if (invalid === "Invalid Ipv4"){
+        console.log("Invalid Ipv4");
+      }
+      else {
+        console.log("Valid IPv4");
+        var holder = "";
+        for(var w =0; w < ipv4.length - 1; w++){
+          holder += ipv4[w];
+        }
+        console.log(holder);
+      }
+  }
+  else{
+    alert("Invalid Ipv4")
+  }
+
+return ipv4;
+}
+
+testIpv4(myipv4);
+
+//============================== Ipv4 validation ==============================//
+
+    </script>
+  </body>
+</html>
